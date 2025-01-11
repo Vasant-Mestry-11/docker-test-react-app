@@ -34,3 +34,29 @@
   `docker run -d -p 5174:5173 <image_id>`
 - use --rm flag to delete the container when its been stopped
 - use --name flag to give name to your container
+
+## Name Docker image
+
+- to name docker image we use -t flag in docker build command along with its version
+
+```
+  docker build -t mywebapp:0.1 .
+```
+
+## Nginx image
+
+Ngnix runs on 80 port by default. NGINX is open source software for web serving, reverse proxying, caching, load balancing, media streaming, and more.
+
+- to pull the image user docker pull nginx
+- run the docker image docker run -p 8080:80 nginx:latest
+
+## Run docker in Python
+
+- create build using docker build .
+- if you're taking input from user then run docker in interactive mannner, for that use below command
+
+```
+  docker run -it <image_id>
+```
+
+- -it stands for interactive terminal

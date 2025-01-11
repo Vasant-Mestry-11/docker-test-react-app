@@ -3,7 +3,7 @@ import "./App.css";
 function App() {
   return (
     <>
-      <h1>Demo Docker Application</h1>
+      <h1>Demo Docker Application Tutorial</h1>
     </>
   );
 }
