@@ -12,4 +12,18 @@
 - after hitting this command you get container id, container name, image id, last time it has been ran, port, status
 - to stop the stop the container use docker stop <container_name>
 - if you try to access the port outside the containe then use the command
-- `docker run -p 5051:5051 <image_id>` this is will do is port 5051 of container will bind and give access to outside the container
+- if you're using vite use below code in vite config
+
+```
+  server: {
+    watch: {
+      usePolling: true,
+    },
+    host: true, // needed for docker container port mapping to work
+    strictPort: true,
+    port: 5173, // replace any port
+  }
+```
+
+- ```docker run -p 5051:5051 <image_id>``` this is will do is port 5051 of container will bind and give access to outside the container
+- use -d in docker run in detached mode
