@@ -60,3 +60,19 @@ Ngnix runs on 80 port by default. NGINX is open source software for web serving,
 ```
 
 - -it stands for interactive terminal
+
+## Rename older docker tag to new public repository
+
+- docker tag <older_tag_name> <new_tag_public_repository_name>
+
+## Docker Volume => Python
+
+- Persist file which are being used by the container even if the container stopped and get deleted
+- to create volume use below command
+- it is stored outside the container hence it doesn't get deleted
+
+```
+  docker run -it --rm -v <volume_name>:/{path_of_directory} <image_id>
+```
+
+- to see the volume use docker volume ls command
