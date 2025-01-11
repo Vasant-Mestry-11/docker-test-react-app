@@ -25,5 +25,12 @@
   }
 ```
 
-- ```docker run -p 5051:5051 <image_id>``` this is will do is port 5051 of container will bind and give access to outside the container
+- `docker run -p 5051:5051 <image_id>` this is will do is port 5051 of container will bind and give access to outside the container
 - use -d in docker run in detached mode
+
+## Running multiple containers from single image
+
+- to use image on multiple containers, just change the port
+  `docker run -d -p 5174:5173 <image_id>`
+- use --rm flag to delete the container when its been stopped
+- use --name flag to give name to your container
