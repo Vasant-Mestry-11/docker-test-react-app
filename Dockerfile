@@ -10,7 +10,7 @@ COPY . .
 RUN npm install
 
 # Run on port -  it is an optional thing
-EXPOSE 5051
+EXPOSE 3000
 
 # from the above command create an image
 # now to start/run the application use below command once the image is created
