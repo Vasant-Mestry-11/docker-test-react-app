@@ -76,3 +76,16 @@ Ngnix runs on 80 port by default. NGINX is open source software for web serving,
 ```
 
 - to see the volume use docker volume ls command
+
+## Mount bind
+
+- Mount bind is used when our code is dependent on external file changes, and that changes should automatically populated on codebase
+- Bind mounts have write access to files on the host by default.
+- One side effect of using bind mounts is that you can change the host filesystem via processes running in a container, including creating, modifying, or deleting important system files or directories.
+
+- syntax
+
+```
+  docker run -v {absolute_path_of_the_file_from_local_directory}:{file_path_from_container_working_director} <image_id>
+
+```
