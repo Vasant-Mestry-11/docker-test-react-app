@@ -126,3 +126,20 @@ Ngnix runs on 80 port by default. NGINX is open source software for web serving,
 ```
 
 - in db connection code only host name will get change, instead of ip the name of the container will get specified
+
+## Docker Compose
+
+- Docker Compose is a tool that helps you define and share multi-container applications.
+- With Compose, you can create a YAML file to define the services and with a single command, you can spin everything up or tear it all down.
+
+
+- create docker-compose file with extension .yml / .yaml
+- create service
+- give name to service
+- add image (mysql)
+- add environment variables
+- enter container name
+- and the use below command
+```
+  <docker_compose_filename> up
+```
