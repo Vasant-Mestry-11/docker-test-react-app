@@ -132,7 +132,6 @@ Ngnix runs on 80 port by default. NGINX is open source software for web serving,
 - Docker Compose is a tool that helps you define and share multi-container applications.
 - With Compose, you can create a YAML file to define the services and with a single command, you can spin everything up or tear it all down.
 
-
 - create docker-compose file with extension .yml / .yaml
 - create service
 - give name to service
@@ -140,6 +139,14 @@ Ngnix runs on 80 port by default. NGINX is open source software for web serving,
 - add environment variables
 - enter container name
 - and the use below command
+
 ```
   <docker_compose_filename> up
 ```
+
+## Docker compose with multiple containers
+
+- use depends on key to wait for one service till another one is up and running along with healthcheck key
+
+- stdin_open and tty => interactive terminal
+- to interact with the terminal you can run services separately so that you do interact with the terminal by using docker-compose
