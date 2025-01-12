@@ -162,3 +162,8 @@ Ngnix runs on 80 port by default. NGINX is open source software for web serving,
 - to create volume in docker-compose use volumes key
 - it will have the relative path of the file of project folder : file path from application folder
   (./servers.txt:/myapp/servers.txt)
+
+## Docker compose port binding
+
+- it is similar to port binding
+- container_port:application_running_port
