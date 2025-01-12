@@ -109,3 +109,20 @@ Ngnix runs on 80 port by default. NGINX is open source software for web serving,
 - inside network you can find container ip address
 - target this ip from host of the pymsql.connect method
 - data in the mysqldb will get preserved until you delete the container, if restart it, data will still persists
+
+## Docker network
+
+- problem in previous connection is to give ip address manual and first we have to mysql container then python container
+- to avoid this we can use of docker network
+- this means we can store multiple container inside same network so that they can communicate directly
+- to create a network use below command
+
+```
+  docker network create <network_name>
+```
+
+```
+  docker run -d --env MYSQL_ROOT_PASSWORD="root" --env MYSQL_DATABASE="userinfo" --network my-net --name mysqldb mysql
+```
+
+- in db connection code only host name will get change, instead of ip the name of the container will get specified
