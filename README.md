@@ -151,8 +151,14 @@ Ngnix runs on 80 port by default. NGINX is open source software for web serving,
 - stdin_open and tty => interactive terminal
 - to interact with the terminal you can run services separately so that you do interact with the terminal by using docker-compose
 
-## Docker componse network
+## Docker compose network
 
 - all the service which are defined inside docker compose file are part of one single network, it creates network automatically by itself, hence we don't have to create separate network for it
 - when you down docker-compose all the volumes, network are still present
 - if you want to delete them after down, use -v flag along with the docker-compose down -v
+
+## Docker compose volume
+
+- to create volume in docker-compose use volumes key
+- it will have the relative path of the file of project folder : file path from application folder
+  (./servers.txt:/myapp/servers.txt)
